@@ -1,0 +1,33 @@
+
+.background {
+    background-color: oklch(61% 0.2 29);
+    &:hover {
+        color: blue;
+    }
+    text-size-adjust: 100%;
+    user-select: none;
+}
+
+
+.background:fullscreen {
+    background-color: black;
+}
+
+@media (min-resolution: 2dppx) {
+    .image {
+      background-image: url(image@2x.png);
+    }
+}
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+  
+  .grid::before {
+    content: 'before';
+  }
+  
+  .grid::after {
+    content: 'after';
+  }
